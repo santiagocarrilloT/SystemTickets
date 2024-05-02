@@ -1,1 +1,1 @@
-# Sistema-Gesti-n-de-Tickets
+# Sistema de gestion de tickets
