@@ -1,7 +1,1 @@
-<?php
-$email = $_POST['email'];
-
-
-
-
-?>
+<h1>Home</h1>

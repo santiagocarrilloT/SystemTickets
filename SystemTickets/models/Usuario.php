@@ -10,7 +10,7 @@
                     header ("Location:".Conexion::ruta()."index.php?m=2");
                     exit();
                 }else{
-                    $sql = "SELECT * FROM ticketsdb WHERE emp_email='carlos@gmail.com' AND emp_dni='2341' AND statusEmp=1";
+                    $sql = "SELECT * FROM employees WHERE emp_email=? AND emp_dni=? AND statusEmp=1";
                     $stmt = $conectar->prepare($sql);
                     $stmt -> bindValue (1, $correo);
                     $stmt -> bindValue (2, $dni);
@@ -21,7 +21,7 @@
                         $_SESSION["emp_id"] = $resultado["emp_id"];
                         $_SESSION["emp_dni"] = $resultado["emp_dni"];
                         $_SESSION["emp_email"] = $resultado["emp_email"];
-                        header("Location: ".Conexion::ruta(). "views/home.php");
+                        header("Location: ".Conexion::ruta(). "view/home/index.php");
                         exit();
                     }
                     else{
