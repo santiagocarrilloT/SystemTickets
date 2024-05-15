@@ -1,7 +1,4 @@
 <?php
-$email = $_POST['email'];
-
-
-
-
+$email = "Que se dice bebé";
+echo $email;
 ?>

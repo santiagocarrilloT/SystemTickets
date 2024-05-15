@@ -1,3 +1,13 @@
+<?php 
+    require_once("config/conexion.php");
+    if (isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+        require_once("models/Usuario.php");
+        $user = new Usuario();
+        $user->login();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +52,8 @@
 
         <!-- Sign In Start -->
         <div class="container-fluid">
-            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+            <form action="" method="POST" id="login_form">
+                <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
                     <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -51,12 +62,33 @@
                             </a>
                             <h3>Iniciar Sesion</h3>
                         </div>
+                        <?php 
+                            if (isset($_GET["m"])){
+                                switch ($_GET["m"]){
+                                    case "1";
+                                     ?>
+                                        <div class="alert alert-primary" role="alert">
+                                            Contraseña o correo incorrectos
+                                        </div>
+                                     <?php
+                                    break;
+
+                                    case "2"; 
+                                    ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            Campos vacíos
+                                        </div>
+                                    <?php
+                                    break;
+                                }
+                            }                        
+                        ?>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" id="emp_email" name="emp_email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Correo</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" id="emp_dni" name="emp_dni" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Contraseña</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -66,12 +98,14 @@
                             </div>
                             <a href="">Olvidaste la contraseña?</a>
                         </div>
+                        <input type="hidden" name="enviar" value="si">
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesion</button>
                         <p class="text-center mb-0">No tienes una cuenta? <a href="">Enviar Email</a></p>
                     </div>
                 </div>
             </div>
         </div>
+    </form>
         <!-- Sign In End -->
     </div>
 

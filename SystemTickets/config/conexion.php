@@ -3,11 +3,11 @@
     session_start();
     
     class Conexion{
-        protected $dbh
+        protected $dbh;
 
         protected function conexion(){
             try{
-                $conectar = $this->dbh = new PDO ("myssql:local=localhost;dbname=ticketsdb", "root","");
+                $conectar = $this->dbh = new PDO ("mysql:local=localhost;dbname=ticketsdb", "root","");
                 return $conectar;
             }
             catch (Exception $e){
@@ -18,11 +18,11 @@
 
 
         public function set_Names (){
-            return $this->dbh-query("SET NAMES 'utf-8'");
+            return $this->dbh->query("SET NAMES 'utf8'");
         }
 
         public function ruta (){
-            return "http://localhost/SystemTickets/";
+            return "http://localhost/SistemaGestionDeTickets/SystemTickets/";
         }
     }
 ?>
