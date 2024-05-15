@@ -9,8 +9,7 @@
                 if (empty($correo) or empty ($dni)) {
                     header ("Location:".Conexion::ruta()."index.php?m=2");
                     exit();
-                }
-                else{
+                }else{
                     $sql = "SELECT * FROM employees WHERE emp_email=? AND emp_dni=? AND statusEmp=1";
                     $stmt = $conectar->prepare($sql);
                     $stmt -> bindValue (1, $correo);
@@ -22,7 +21,7 @@
                         $_SESSION["emp_id"] = $resultado["emp_id"];
                         $_SESSION["emp_dni"] = $resultado["emp_dni"];
                         $_SESSION["emp_email"] = $resultado["emp_email"];
-                        header("Location: ".Conexion::ruta()."view/Home/");
+                        header("Location: ".Conexion::ruta(). "view/home/index.php");
                         exit();
                     }
                     else{

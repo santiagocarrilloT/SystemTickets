@@ -7,11 +7,11 @@
 
         protected function conexion(){
             try{
-                $conectar = $this->dbh = new PDO ("mysql:local=localhost;dbname=ticketsdb", "root","");
+                $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=ticketsdb", "root","");
                 return $conectar;
             }
             catch (Exception $e){
-                print "¡Error DB!: " . $e->getMessage() . "<br/>";
+                print "¡Error BD!: " . $e->getMessage() . "<br/>";
                 die();
             }
         }
