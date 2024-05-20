@@ -77,17 +77,17 @@
                             ?>
 
                             <div class="form-floating mb-3">
-                                <input type="email" id="emp_correo" name= "emp_correo" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="email" id="emp_email" name= "emp_email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Correo</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" id="emp_dni" name="emp_dni"  class="form-control" id="floatingPassword" placeholder="Password">
+                                <input type="password" id="emp_dni" name="emp_dni" class="form-control" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                             
                             <input type="hidden" name="enviar" class="form-control" value="si">
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesion</button>
-                            <p class="text-center mb-0">No tienes una cuenta? <a href=""> Crear una</a></p>
+                            <p class="text-center mb-0">No tienes una cuenta? <a href=""> Crear una Cuenta</a></p>
                         </div>
                     </div>
                 </div>
