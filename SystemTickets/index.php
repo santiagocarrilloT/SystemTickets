@@ -77,11 +77,11 @@
                             ?>
 
                             <div class="form-floating mb-3">
-                                <input type="email" id="emp_email" name= "emp_email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="email" id="email_emp" name= "email_emp" class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Correo</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" id="emp_password" name="emp_password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <input type="password" id="emp_dni" name="emp_dni" class="form-control" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                             
