@@ -1,9 +1,9 @@
 <!--<?php 
-if (!isset($_SESSION['emp_name'])){
+if (!isset($_SESSION['nombre_emp'])){
     header('Location: ../Home/index.php');
     exit;
 }
-$emp_name = $_SESSION['emp_name'];
+$emp_name = $_SESSION['nombre_emp'];
 ?>-->
 
 <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">

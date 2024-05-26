@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['emp_name'])) {
+if (!isset($_SESSION['nombre_emp'])) {
     header('Location: ../Home/index.php');
     exit;
 }
 
-$user = $_SESSION['emp_name'];
+$user = $_SESSION['nombre_emp'];
 ?>
 <header class="site-header">
 <div class="sidebar pe-4 pb-3">
