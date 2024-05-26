@@ -81,7 +81,7 @@
                                 <label for="floatingInput">Correo</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" id="emp_dni" name="emp_dni" class="form-control" id="floatingPassword" placeholder="Password">
+                                <input type="password" id="emp_password" name="emp_password" class="form-control" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                             

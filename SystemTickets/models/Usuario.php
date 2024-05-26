@@ -5,16 +5,16 @@
             parent::set_Names();
             if(isset($_POST["enviar"])){
                 $correo = $_POST["emp_email"];
-                $dni = $_POST["emp_dni"];
-                if (empty($correo) or empty($dni)) {
+                $password = $_POST["emp_password"];
+                if (empty($correo) or empty($password)) {
                     header ("Location:".Conexion::ruta()."index.php?m=2");
                     exit();
                 }
                 else{
-                    $sql = "SELECT * FROM employees WHERE emp_email=? AND emp_dni=? AND statusEmp=1";
+                    $sql = "SELECT * FROM employees WHERE emp_email=? AND emp_password=? AND statusEmp=1";
                     $stmt = $conectar->prepare($sql);
                     $stmt -> bindValue (1, $correo);
-                    $stmt -> bindValue (2, $dni);
+                    $stmt -> bindValue (2, $password);
                     $stmt -> execute();
                     $resultado = $stmt -> fetch();
                     if(is_array($resultado) and count($resultado)>0){
@@ -34,5 +34,5 @@
             }
         }
     }
-
+    
 ?>
