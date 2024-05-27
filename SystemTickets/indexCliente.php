@@ -1,9 +1,9 @@
 <?php
     require_once("config/conexion.php");
     if(isset($_POST['enviar']) and $_POST['enviar'] == 'si'){
-        require_once("models/Usuario.php");
-        $usuario = new Usuario();
-        $usuario->login();
+        require_once("models/Cliente.php");
+        $cliente = new Cliente();
+        $cliente->loginCliente();
     }
 ?>
 
@@ -65,10 +65,10 @@
                                 if(isset($_GET['m'])){
                                     switch ($_GET['m']) {
                                         case '1':
-                                            echo '<div class="alert alert-danger" role="alert">Correo o Contraseña incorrectos</div>';
+                                            echo '<div class="alert alert-danger" role="alert">Correo incorrecto</div>';
                                             break;
                                         case '2':
-                                            echo '<div class="alert alert-danger" role="alert">Todos los campos son obligatorios</div>';
+                                            echo '<div class="alert alert-danger" role="alert">Llenar el campo</div>';
                                             break;
                                         default:
                                             break;
@@ -77,21 +77,17 @@
                             ?>
 
                             <div class="form-floating mb-3">
-                                <input type="email" id="email_emp" name= "email_emp" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                <label for="floatingInput">Correo</label>
+                                <input type="email" id="email_user" name= "email_user" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Correo cliente</label>
                             </div>
-                            <div class="form-floating mb-4">
-                                <input type="password" id="password_emp" name="password_emp" class="form-control" id="floatingPassword" placeholder="Password">
-                                <label for="floatingPassword">Contraseña</label>
-                            </div>
-                            
+
                             <input type="hidden" name="enviar" class="form-control" value="si">
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesion</button>
                             <div class="text-center mb-0">
                                 <div class="btn-group" role="group">
                         
-                                    <a type="button" class="btn btn-outline-primary" href="indexCliente.php">Cliente</a>
-                                    <a type="button" class="btn btn-outline-primary" href="index.php">Empleado</a>
+                                <a type="button" class="btn btn-outline-primary" href="indexCliente.php">Cliente</a>
+                                <a type="button" class="btn btn-outline-primary" href="index.php">Empleado</a>
                                 </div>
                             </div>
                         </div>
