@@ -21,8 +21,10 @@
                         // Atributos de la tabla empleados
                         $_SESSION["Id_emp"] = $resultado["Id_emp"];
                         $_SESSION["DNI_emp"] = $resultado["DNI_emp"];
+                        $_SESSION["phone_emp"] = $resultado["phone_emp"];
                         $_SESSION["email_emp"] = $resultado["email_emp"];
                         $_SESSION["nombre_emp"] = $resultado["nombre_emp"];
+                        $_SESSION["apellido_emp"] = $resultado["apellido_emp"];
                         header("Location: ".Conexion::ruta()."view/home/index.php");
                         exit();
                     }

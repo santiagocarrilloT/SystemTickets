@@ -1,10 +1,10 @@
-<!--<?php 
-if (!isset($_SESSION['nombre_emp'])){
-    header('Location: ../Home/index.php');
+<?php 
+if (!isset($_SESSION['nombre_user'])) {
+    header('Location: ../HomeCliente/index.php');
     exit;
 }
-$emp_name = $_SESSION['nombre_emp'];
-?>-->
+$emp_name = $_SESSION['nombre_user'];
+?>
 
 <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
     <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
@@ -86,8 +86,8 @@ $emp_name = $_SESSION['nombre_emp'];
                 <span class="d-none d-lg-inline-flex"><?php echo htmlspecialchars($emp_name);?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                <a href="../informacionUsuario/infoEmpleado.php" class="dropdown-item">Mi Perfil</a>
-                <a href="../../index.php" class="dropdown-item">Cerrar sesion</a>
+                <a href="" class="dropdown-item">Mi Perfil</a>
+                <a href="../../indexCliente.php" class="dropdown-item">Cerrar sesion</a>
             </div>
         </div>
     </div>
