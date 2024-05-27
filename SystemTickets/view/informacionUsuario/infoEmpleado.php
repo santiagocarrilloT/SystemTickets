@@ -1,4 +1,11 @@
-
+<?php
+    session_start();
+    $nombre = $_SESSION["nombre_emp"];
+    $apellido = $_SESSION["apellido_emp"];
+    $dni = $_SESSION["DNI_emp"];
+    $correo = $_SESSION["email_emp"];
+    $telefono = $_SESSION["phone_emp"];
+?>
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +36,7 @@
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Informacion del cliente</h6>
+                            <h6 class="mb-4">Informacion del empleado</h6>
                             <table class="table">
                                 <thead>
                                     <tr>
