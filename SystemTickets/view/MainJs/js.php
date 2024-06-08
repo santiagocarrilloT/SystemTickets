@@ -9,3 +9,4 @@
 <script src="../../public/lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="../../public/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 <script src="../../public/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

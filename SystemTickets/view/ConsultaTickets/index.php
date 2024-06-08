@@ -26,9 +26,34 @@
 
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>Consultas</h3>
+                <div class="row g-3">
+                    <div class="bg-secondary rounded h-20 p-1">
+                    <div class="row vh-20 bg-secondary rounded align-items-center justify-content-center mx-0">
+                        <div class="col-md-5 text-center">
+                            <h5 class="mb-3" style="margin: 13px;">Home / Consulta Ticket</h5>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">Lista Tickets</h6>
+                    <div class="table-responsive">
+                        <table class="table table-dark" id="ticket_data">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Num.Serie</th>
+                                    <th scope="col">Titulo</th>
+                                    <th scope="col">Vencimiento</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Lugar donde se muestra información de tickets -->
+                            </tbody>
+                        </table>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -61,7 +86,7 @@
 
     <!-- JavaScript Libraries -->
     <?php require_once '../MainJs/js.php'; ?>
-    <script type="text/JavaScript" src="consulta.js"></script>
+    <script type="text/JavaScript" src="consultaT.js"></script>
 </body>
 
 </html>
