@@ -1,4 +1,11 @@
-
+<?php
+session_start();
+if (!isset($_SESSION['nombre_emp'])) {
+    header('Location: ../../index.php');
+    exit();
+}
+$emp_name = $_SESSION['nombre_emp'];
+?>
 
 <!DOCTYPE html>
 <html>
@@ -61,7 +68,7 @@
 
     <!-- JavaScript Libraries -->
     <?php require_once '../MainJs/js.php'; ?>
-    <script type="text/JavaScript" src="Home.js"></script>
+    
 </body>
 
 </html>

@@ -1,4 +1,11 @@
-
+<?php
+session_start();
+if (!isset($_SESSION['nombre_user'])) {
+    header('Location: ../../indexCliente.php');
+    exit();
+}
+$name_user = $_SESSION['nombre_user'];
+?>
 
 <!DOCTYPE html>
 <html>

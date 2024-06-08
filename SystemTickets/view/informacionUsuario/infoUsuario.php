@@ -40,8 +40,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Character</th>
-                                        <th scope="col">Value</th>
+                                        <th scope="col">Datos</th>
+                                        <th scope="col">Valores</th>
                                     </tr>
                                 </thead>
                                 <tbody>
