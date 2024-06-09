@@ -13,7 +13,7 @@ $user = $_SESSION['nombre_emp'];
 <header class="site-header">
 <div class="sidebar pe-4 pb-3">
                 <nav class="navbar bg-secondary navbar-dark" method="post">
-                    <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <a href="../Home/index.php" class="navbar-brand mx-4 mb-3">
                         <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>TickFast</h3>
                     </a>
                     <div class="d-flex align-items-center ms-4 mb-4">
@@ -28,7 +28,7 @@ $user = $_SESSION['nombre_emp'];
                                 <h6 class="mb-0">
                                     <?php echo htmlspecialchars($user);?>
                                 </h6>
-                                <span>Admin</span>
+                                <span>Empleado</span>
                             </div>
                         
                     </div>
@@ -36,20 +36,9 @@ $user = $_SESSION['nombre_emp'];
                         <a href="../Home/" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Inicio</a>
                         <a href="../NuevoTicket/" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Nuevo Ticket</a>
                         <a href="../ConsultaTickets/" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Consultar Tickets</a>
-                        <div class="nav-item dropdown">
-                            <!--<a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                            <div class="dropdown-menu bg-transparent border-0">
-                                <a href="signin.html" class="dropdown-item">Sign In</a>
-                                <a href="signup.html" class="dropdown-item">Sign Up</a>
-                                <a href="404.html" class="dropdown-item">404 Error</a>
-                                <a href="blank.html" class="dropdown-item active">Blank Page</a>
-                            </div>-->
-                        </div>
+                        <a href="../ControlCuentas/controlCuentas.php" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Control Cuentas</a>
                     </div>
-                </nav>
-
-            
-
+                </nav>        
             </div>
             <!-- Sidebar End -->
 </header>

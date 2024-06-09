@@ -86,8 +86,8 @@ $emp_name = $_SESSION['nombre_user'];
                 <span class="d-none d-lg-inline-flex"><?php echo htmlspecialchars($emp_name);?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                <a href="../informacionUsuario/infoUsuario.php" class="dropdown-item">Mi Perfil</a>
-                <a href="../../indexCliente.php" class="dropdown-item">Cerrar sesión</a>
+                <a href="" class="dropdown-item">Mi Perfil</a>
+                <a href="../Loguot/logoutCliente.php" class="dropdown-item">Cerrar sesion</a>
             </div>
         </div>
     </div>

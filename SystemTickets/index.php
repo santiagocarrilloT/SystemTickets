@@ -4,6 +4,12 @@
         require_once("models/Usuario.php");
         $usuario = new Usuario();
         $usuario->login();
+
+        // Imprimir los valores de correo y contraseña
+        if(isset($_POST['email_emp']) && isset($_POST['password_emp'])){
+            echo "Correo: " . $_POST['email_emp'] . "<br>";
+            echo "Contraseña: " . $_POST['password_emp'] . "<br>";
+        }
     }
 ?>
 
@@ -50,7 +56,7 @@
 
         <!-- Sign In Start -->
         <div class="container-fluid">
-            <form class="sing-box" action="" method="post" id="login_form">
+            <form  action="" method="post" id="login_form">
                 <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                     <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
                         <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
@@ -77,19 +83,18 @@
                             ?>
 
                             <div class="form-floating mb-3">
-                                <input type="email" id="email_emp" name= "email_emp" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                <label for="floatingInput">Correo</label>
+                                <input type="email" id="email_emp" name= "email_emp" class="form-control"  placeholder="name@example.com" autocomplete="current-password">
+                                <label for="email_emp">Correo</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" id="password_emp" name="password_emp" class="form-control" id="floatingPassword" placeholder="Password">
-                                <label for="floatingPassword">Contraseña</label>
+                                <input type="password" id="password_emp" name="password_emp" class="form-control" placeholder="Password" autocomplete="current-password">
+                                <label for="password_emp">Contraseña</label>
                             </div>
                             
                             <input type="hidden" name="enviar" class="form-control" value="si">
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesion</button>
                             <div class="text-center mb-0">
                                 <div class="btn-group" role="group">
-                        
                                     <a type="button" class="btn btn-outline-primary" href="indexCliente.php">Cliente</a>
                                     <a type="button" class="btn btn-outline-primary" href="index.php">Empleado</a>
                                 </div>
@@ -99,7 +104,6 @@
                 </div>
             </form>
         </div>
-    </form>
         <!-- Sign In End -->
     </div>
 
@@ -116,5 +120,6 @@
 
     <!-- Template Javascript -->
     <script src="public/js/main.js"></script>
+    <!-- <script type="text/JavaScript" src="iniciarSesion.js"></script> -->
 </body>
 </html>

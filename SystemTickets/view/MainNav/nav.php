@@ -87,7 +87,7 @@ $emp_name = $_SESSION['nombre_emp'];
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                 <a href="../informacionUsuario/infoEmpleado.php" class="dropdown-item">Mi Perfil</a>
-                <a href="../Loguot/logout.php" class="dropdown-item" id="cerrarSesion">Cerrar sesion</a>
+                <a href="../Loguot/logout.php" class="dropdown-item">Cerrar sesion</a>
             </div>
         </div>
     </div>

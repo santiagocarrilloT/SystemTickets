@@ -40,8 +40,8 @@
                             <table class="table text-start align-middle table-bordered table-hover table-striped table-dark mb-0">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Caracter</th>
-                                        <th scope="col">Valor</th>
+                                        <th scope="col">Datos</th>
+                                        <th scope="col">Valores</th>
                                     </tr>
                                 </thead>
                                 <tbody>
