@@ -59,7 +59,7 @@ $emp_name = $_SESSION['nombre_user'];
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="fa fa-bell me-lg-2"></i>
-                <span class="d-none d-lg-inline-flex">Notificatin</span>
+                <span class="d-none d-lg-inline-flex">Notification</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                 <a href="#" class="dropdown-item">
@@ -86,8 +86,8 @@ $emp_name = $_SESSION['nombre_user'];
                 <span class="d-none d-lg-inline-flex"><?php echo htmlspecialchars($emp_name);?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                <a href="" class="dropdown-item">Mi Perfil</a>
-                <a href="../../indexCliente.php" class="dropdown-item">Cerrar sesion</a>
+                <a href="../informacionUsuario/infoUsuario.php" class="dropdown-item">Mi Perfil</a>
+                <a href="../../indexCliente.php" class="dropdown-item">Cerrar sesión</a>
             </div>
         </div>
     </div>

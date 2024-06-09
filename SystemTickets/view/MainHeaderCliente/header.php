@@ -7,7 +7,6 @@ if (!isset($_SESSION['nombre_user'])) {
     exit;
 }
 $user = $_SESSION['nombre_user'];
-
 ?>
 <header class="site-header">
 <div class="sidebar pe-4 pb-3">
@@ -27,7 +26,7 @@ $user = $_SESSION['nombre_user'];
                                 <h6 class="mb-0">
                                     <?php echo htmlspecialchars($user);?>
                                 </h6>
-                                <span>Admin</span>
+                                <span>Cliente</span>
                             </div>
                         
                     </div>

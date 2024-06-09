@@ -37,7 +37,7 @@
                     <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Informacion del cliente</h6>
-                            <table class="table">
+                            <table class="table text-start align-middle table-bordered table-hover table-dark mb-0">
                                 <thead>
                                     <tr>
                                         <th scope="col">Character</th>
