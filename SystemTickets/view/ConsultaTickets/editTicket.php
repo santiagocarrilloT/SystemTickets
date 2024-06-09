@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
 <html>
     <?php require_once '../MainHead/head.php'; ?>
-    <title>NuevoTicket</title>
+    <title>EditarTicket</title>
 </head>
 
 <body>
@@ -26,13 +28,13 @@
             <div class="container-fluid pt-4 px-4">
                 <div id="container"></div>
                 <!-- Inicio crear Ticket -->
-                <form method="post" id="ticket_form">
-                    <input type="hidden" id="user_create" name="user_create" value="<?php echo $_SESSION["Id_emp"] ?>">
+                <form method="post" id="edit_form">
+                    <input type="hidden" id="ticket_id" name="ticket_id" value="<?php echo $_GET['id'] ?>">
                     <div class="row g-3">
                         <div class="bg-secondary rounded h-20 p-1">
                             <div class="row vh-20 bg-secondary rounded align-items-center justify-content-center mx-0">
                                 <div class="col-md-5 text-center">
-                                    <h5 class="mb-3" style="margin: 13px;">Home / Nuevo Ticket</h5>
+                                    <h5 class="mb-3" style="margin: 13px;">Consultar Ticket / Editar Ticket</h5>
                                     <div class="p-2 mb-2 bg-warning text-dark" style="border-radius: 15px;">Calendario en la sección inferior</div>
                                 </div>
                             </div>
@@ -40,42 +42,48 @@
                         <div class="col-sm-11 col-xl-5">
                             <div class="bg-secondary rounded h-100 p-4">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="modelo_ticket" name="modelo_ticket" placeholder="">
-                                    <label for="modelo_ticket">Modelo de Ordenador</label>
+                                    <input type="text" class="form-control" id="edit_modelo" name="edit_modelo" placeholder="">
+                                    <label for="edit_modelo">Modelo de Ordenador</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="numserie_ticket" name="numserie_ticket" placeholder="">
-                                    <label for="numserie_ticket">Número de Serial</label>
+                                    <input type="text" class="form-control" id="edit_numserie" name="edit_numserie" placeholder="">
+                                    <label for="edit_numserie">Número de Serial</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="correo_cliente" name="correo_cliente" placeholder="">
-                                    <label for="correo_cliente">Correo de Cliente</label>
+                                    <input type="email" class="form-control" id="edit_correo" name="edit_correo" placeholder="">
+                                    <label for="edit_correo">Correo de Cliente</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="">
-                                    <label for="fecha_vencimiento">Fecha de Entrega</label>
+                                    <input type="text" class="form-control" id="edit_vencimiento" name="edit_vencimiento" placeholder="">
+                                    <label for="edit_vencimiento">Fecha de Entrega</label>
                                 </div>
-                                <div class="form-floating mb-3" style="width: 200px;">
-                                    <select class="form-select" id="estado_ticket" name="estado_ticket" aria-label="Floating label select example">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="form-floating mb-3">
+                                    <select class="form-select" id="edit_estado" name="edit_estado" aria-label="Floating label select example">
                                         <!-- <option selected="">-</option> -->
                                         <!-- <option value="1">Bajo</option>
                                         <option value="2">Normal</option>
                                         <option value="3">Alto</option> -->
                                     </select>
-                                    <label for="estado_ticket">Estado</label>
+                                    <label for="edit_estado">Estado</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="estado_anterior" name="estado_anterior" disabled>
+                                        <label for="estado_anterior">Estado anterior</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-13 col-xl-7">
                             <div class="bg-secondary rounded h-100 p-4">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="titulo_ticket" name="titulo_ticket" placeholder="">
-                                    <label for="titulo_ticket">Asunto</label>
+                                    <input type="text" class="form-control" id="edit_titulo" name="edit_titulo" placeholder="">
+                                    <label for="edit_titulo">Asunto</label>
                                 </div>
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Agrega el comentario aquí" id="descripcion_ticket" name="descripcion_ticket" style="height: 278px;"></textarea>
-                                    <label for="descripcion_ticket">Comentario</label>
-                                    <button type="submit" name="action" value="add" class="btn btn-success m-1">Guardar</button>
+                                    <textarea class="form-control" placeholder="Agrega el comentario aquí" id="edit_descripcion" name="edit_descripcion" style="height: 278px;"></textarea>
+                                    <label for="edit_descripcion">Comentario</label>
+                                    <button type="submit" name="action" value="add" class="btn btn-success m-1">Actualizar</button>
                                 </div>
                             </div>
                         </div>
@@ -123,6 +131,6 @@
 
     <!-- JavaScript Libraries -->
     <?php require_once '../MainJs/js.php';?>
-    <script type="module" src="nuevoTk.js"></script>
+    <script type="module" src="editTickets.js"></script>
 </body>
 </html>

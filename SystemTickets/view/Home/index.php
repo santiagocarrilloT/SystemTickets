@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
     <?php require_once '../MainHead/head.php'; ?>
