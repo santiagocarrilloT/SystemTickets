@@ -1,40 +1,51 @@
 $(document).ready(function() {
-    $("#btn_eliminar").on("click", function() {
-        var correoEmpleado = $("#elim_correo").val();
-        if (correoEmpleado !== "") {
-            eliminaEmpleado();
+    $("#eliminar_form").on("submit", function(e) {
+        e.preventDefault();
+        if (validarEliminarFormulario()) {
+            eliminarEmpleado();
         } else {
             Swal.fire({
                 title: '¡ERROR!',
-                text: 'Ingresa el correo del empleado',
+                text: 'Por favor, ingresa el correo del empleado.',
                 icon: 'error',
                 confirmButtonText: 'Aceptar'
             });
         }
     });
+
+    function validarEliminarFormulario() {
+        return $("#elim_correo").val() !== "";
+    }
+
+    function eliminarEmpleado() {
+        var formData = new FormData($("#eliminar_form")[0]);
+        $.ajax({
+            url: "../../controller/empleado.php?op=delete",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                Swal.fire({
+                    title: '¡Éxito!',
+                    text: 'Cuenta eliminada correctamente.',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+                limpiarFormularioEliminar();
+            },
+            error: function(xhr, status, error) {
+                Swal.fire({
+                    title: '¡ERROR!',
+                    text: 'Error al eliminar la cuenta.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+            }
+        });
+    }
+
+    function limpiarFormularioEliminar() {
+        $("#eliminar_form")[0].reset();
+    }
 });
-
-function eliminaEmpleado() {
-    var formData = new FormData($("#empleado_form")[0]);
-    $.ajax({
-        url: "../../controller/empleado.php?op=delete",
-        type: "POST",
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: function(datos) {
-            Swal.fire({
-                title: '¡Éxito!',
-                text: 'Empleado eliminado correctamente',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
-            });
-            limpiar();
-        }
-    });
-
-}
-
-function limpiar(){
-    $("#elim_correo").val("");
-}

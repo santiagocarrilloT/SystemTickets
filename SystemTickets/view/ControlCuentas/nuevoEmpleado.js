@@ -1,65 +1,53 @@
-function init(){
-    $("#empleado_form").on("submit", function(e){
+$(document).ready(function() {
+    $("#empleado_form").on("submit", function(e) {
         e.preventDefault();
-        if(validarFormulario()){
-            console.log("Enviando formulario...");
-            guardaryeditarE(e);
+        if (validarCrearFormulario()) {
+            crearEmpleado();
         } else {
             Swal.fire({
                 title: '¡ERROR!',
-                text: 'Ingresa informacion en todos los campos',
+                text: 'Por favor, completa todos los campos.',
                 icon: 'error',
                 confirmButtonText: 'Aceptar'
             });
         }
     });
-}
 
-function validarFormulario(){
-    if($("#nombre_emp").val() === "" ||
-        $("#apellido_emp").val() === "" ||
-        $("#DNI_emp").val() === "" ||
-        $("#phone_emp").val() === "" ||
-        $("#email_emp").val() === "" ||
-        $("#password_emp").val() === ""){
-        return false;
+    function validarCrearFormulario() {
+        return $("#nombre_emp").val() !== "" && $("#apellido_emp").val() !== "" &&
+            $("#DNI_emp").val() !== "" && $("#phone_emp").val() !== "" &&
+            $("#email_emp").val() !== "" && $("#password_emp").val() !== "";
     }
-    return true;
-}
 
-function guardaryeditarE(e){
-    console.log("Enviando formulario...");
-    var formData = new FormData($("#empleado_form")[0]);
-    $.ajax({
-        url: "../../controller/empleado.php?op=insert",
-        type: "POST",
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: function(datos){
-            Swal.fire({
-                title: 'Correcto!',
-                text: 'Usuario creado con exito',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
-            });
-            limpiarFormulario();            
-        }
-    });
-    
-}
-function limpiarFormulario() {
-    $("#nombre_emp").val('');
-    $("#apellido_emp").val('');
-    $("#DNI_emp").val('');
-    $("#phone_emp").val('');
-    $("#email_emp").val('');
-    $("#password_emp").val('');
-}
+    function crearEmpleado() {
+        var formData = new FormData($("#empleado_form")[0]);
+        $.ajax({
+            url: "../../controller/empleado.php?op=insert",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                Swal.fire({
+                    title: '¡Éxito!',
+                    text: 'Cuenta creada correctamente.',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+                limpiarFormularioCrear();
+            },
+            error: function(xhr, status, error) {
+                Swal.fire({
+                    title: '¡ERROR!',
+                    text: 'Error al crear la cuenta.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+            }
+        });
+    }
 
-
-init();
-
-
-
-
+    function limpiarFormularioCrear() {
+        $("#empleado_form")[0].reset();
+    }
+});
