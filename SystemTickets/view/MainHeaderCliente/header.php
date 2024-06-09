@@ -7,7 +7,6 @@ if (!isset($_SESSION['nombre_user'])) {
     exit;
 }
 $user = $_SESSION['nombre_user'];
-
 ?>
 <header class="site-header">
 <div class="sidebar pe-4 pb-3">

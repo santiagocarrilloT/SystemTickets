@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 if (!isset($_SESSION['nombre_emp'])) {
@@ -6,6 +7,7 @@ if (!isset($_SESSION['nombre_emp'])) {
 }
 $emp_name = $_SESSION['nombre_emp'];
 ?>
+
 
 <!DOCTYPE html>
 <html>
