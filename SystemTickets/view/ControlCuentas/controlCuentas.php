@@ -53,6 +53,7 @@
                                                 <div class="col-sm-11 col-xl-8 mx-auto">                                    
                                                     <div class="bg-secondary rounded h-100 p-4">                                            
                                                         <div class="row">
+                                                            
                                                             <div class="col-md-5">
                                                                 <div class="form-floating mb-3">
                                                                     <input id="nombre_emp" name="nombre_emp" type="text" class="form-control form-control-sm" placeholder="Nombre Cliente" >
@@ -97,11 +98,12 @@
                                                 </div>
                                                 <label for="exampleInputEmail1" class="form-label">Ingrese el correo del empleado a eliminar</label>
                                                 <div class="form-floating mb-3">
-                                                    <input id="elim_correo" type="text" class="form-control" id="floatingelimCorreo" placeholder="Correo Electrónico">
-                                                    <label for="floatingelimCorreo">Correo Electrónico</label>
+                                                    <input id="elim_correo" name="elim_correo" type="text" class="form-control" placeholder="Correo Electrónico">
+                                                    <label for="elim_correo">Correo Electrónico</label>
                                                 </div>
                                                 <div class="text-center">
-                                                    <button type="button" class="btn btn-primary m-2">Eliminar Cuenta</button>
+                                                    <input type="hidden" name="enviar" class="form-control" value="si">
+                                                    <button id="btn_eliminar" name="action" value="add" class="btn btn-primary m-2">Eliminar Cuenta</button>
                                                 </div>
                                         </div>
                                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -114,7 +116,7 @@
                                                 <div class="col-md-8">
                                                     <label class="form-label">Ingrese el correo del empleado a buscar</label>
                                                     <div class="input-group mb-3">
-                                                        <input class="form-control bg-dark border-0" type="text" placeholder="Buscar">
+                                                        <input id="buscar_emp" name="buscar_emp" class="form-control bg-dark border-0" type="text" placeholder="Buscar">                                        
                                                         <button type="button" class="btn btn-info rounded-pill">Buscar</button>
                                                     </div>
                                                 </div>
@@ -193,5 +195,6 @@
     <!-- JavaScript Libraries -->
     <?php require_once '../MainJs/js.php'; ?>
     <script type="text/JavaScript" src="nuevoEmpleado.js"></script>
+    <script type="text/JavaScript" src="eliminarEmpleado.js"></script>
 </body>
 </html>

@@ -37,27 +37,29 @@ function guardaryeditarE(e){
         contentType: false,
         processData: false,
         success: function(datos){
-            console.log(datos);
+            Swal.fire({
+                title: 'Correcto!',
+                text: 'Usuario creado con exito',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+            limpiarFormulario();            
         }
     });
-    Swal.fire({
-        title: '¡Correcto!',
-        text: 'Usuario creado Correctamente ',
-        icon: 'success',
-        confirmButtonText: 'Aceptar'
-    });
-    limpiar(e);
+    
 }
+function limpiarFormulario() {
+    $("#nombre_emp").val('');
+    $("#apellido_emp").val('');
+    $("#DNI_emp").val('');
+    $("#phone_emp").val('');
+    $("#email_emp").val('');
+    $("#password_emp").val('');
+}
+
 
 init();
 
-function limpiar(e){
-    $("#nombre_emp").val("");
-    $("#apellido_emp").val("");
-    $("#DNI_emp").val("");
-    $("#phone_emp").val("");
-    $("#email_emp").val("");
-    $("#password_emp").val("");
-}
+
 
 

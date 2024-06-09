@@ -14,5 +14,19 @@
                 $_POST["password_emp"]
             );
         break;
+        case "delete":
+            $datos = $empleado->eliminarEmpleado(
+                $_POST["elim_correo"]
+            );
+        break;
+        case "editar":
+            $datos = $empleado->editarEmpleado(
+                $_POST["DNI_emp"],
+                $_POST["nombre_emp"],
+                $_POST["apellido_emp"],
+                $_POST["phone_emp"],
+                $_POST["email_emp"],
+                $_POST["password_emp"]
+            );
     }
 ?>
