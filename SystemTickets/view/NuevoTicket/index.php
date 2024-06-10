@@ -114,32 +114,6 @@
             </div>
             <!-- Footer End -->
         </div>
-        <!-- Content End -->
-        <!-- Modal para crear cuenta de cliente -->
-        <!-- <div class="modal fade" id="crearCuentaModal" tabindex="-1" aria-labelledby="crearCuentaModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="crearCuentaModalLabel">Crear Cuenta de Cliente</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="crearCuentaForm">
-                            <div class="mb-3">
-                                <label for="nombre_cliente" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre_cliente" name="nombre_cliente">
-                            </div>
-                            <div class="mb-3">
-                                <label for="correo_cliente_modal" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="correo_cliente_modal" name="correo_cliente_modal">
-                            </div>                            
-                            <button type="button" class="btn btn-primary" id="guardarClienteBtn">Guardar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Final Modal para crear cuenta de cliente -->
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
