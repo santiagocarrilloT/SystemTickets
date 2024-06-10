@@ -4,6 +4,25 @@
     $ticket = new Ticket();
 
     switch($_GET["op"]){
+        /* case "insert":
+            // Verificar si el correo electrónico existe en la tabla de usuarios
+            $email = $_POST["correo_cliente"];
+            $usuario_existente = $ticket->verificarCorreoExistente($email);
+            
+            if($usuario_existente) {
+                // Si el usuario existe, proceder a crear el ticket
+                $datos = $ticket->nuevoTicket(
+                    $_POST["modelo_ticket"], $_POST["numserie_ticket"], $_POST["titulo_ticket"],
+                    $_POST["descripcion_ticket"], $_POST["fecha_vencimiento"], $_POST["estado_ticket"], 
+                    $_POST["user_create"], $email
+                );
+                break;
+            } else {
+                // Si el usuario no existe, devolver una respuesta para abrir el modal
+                $response = ["modal" => "crearCuentaModal"];
+                echo json_encode($response);
+                break;
+            } */
         case "insert":
             $datos = $ticket->nuevoTicket(
                 $_POST["modelo_ticket"], $_POST["numserie_ticket"], $_POST["titulo_ticket"],
@@ -98,6 +117,7 @@
             echo $resultado;
             break;
         break;
+        
     }
 ?>
 

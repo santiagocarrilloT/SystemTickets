@@ -67,7 +67,6 @@
                 "aaData"=>$data);    
             echo json_encode($resultado);
             break; 
-
         case "estadistica_cli":
             $datos = $ticket->estadisticaEstadoCli($_POST["estado_cli"]);
             $resultado = "";
@@ -85,6 +84,36 @@
             }
             echo $resultado;
             break;
-        break;       
+        break;
+        case "insert":
+            $datos = $ticket->nuevoCliente(
+                $_POST["DNI_user"],
+                $_POST["nombre_user"],
+                $_POST["apellido_user"],
+                $_POST["phone_user"],
+                $_POST["email_user"],
+                $_POST["password_user"]
+            );
+        break;
+        case "delete":
+            $datos = $ticket->eliminarCliente(
+                $_POST["elim_correo"]
+            );
+        break;
+        case "editar":
+            $datos = $ticket->editarCliente(
+                $_POST["bDni_user"],
+                $_POST["bNombre_user"],
+                $_POST["bApellido_user"],
+                $_POST["bPhone_user"],
+                $_POST["bEmail_user"],
+                $_POST["bPassword_user"]
+            );
+        break;
+        case "buscar":
+            $datos = $ticket->buscarCliente(
+                $_POST["buscar_user"]
+            );
+        break;
     }
 ?>

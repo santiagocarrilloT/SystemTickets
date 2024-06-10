@@ -29,7 +29,7 @@
                             <div class="bg-secondary rounded h-20 p-1">
                                 <div class="row vh-20 bg-secondary rounded align-items-center justify-content-center mx-0">
                                     <div class="col-md-5 text-center">
-                                        <h5 class="mb-3">Home / Control de cuentas empleados</h5>
+                                        <h5 class="mb-3">Home / Control de cuentas Cliente</h5>
                                     </div>
                                 </div>
                             </div>
@@ -44,11 +44,11 @@
                                     </nav>                                    
                                     <div class="tab-content pt-3" id="nav-tabContent">                                                                           
                                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                            <!-- /// crear empleado-->
-                                            <form method="post" id="empleado_form">                                                
+                                            <!-- /// crear cliente-->
+                                            <form method="post" id="cliente_form">                                                
                                                 <div class="row vh-20 bg-secondary rounded align-items-center justify-content-center mx-0">
                                                     <div class="col-md-8 text-center">
-                                                        <h4 class="mb-3">CREAR CUENTA PARA UN EMPLEADO</h4>
+                                                        <h4 class="mb-3">CREAR CUENTA PARA UN CLIENTE</h4>
                                                     </div>
                                                 </div>                                                
                                                 <div class="col-sm-11 col-xl-8 mx-auto">                                    
@@ -56,30 +56,30 @@
                                                         <div class="row">                                            
                                                             <div class="col-md-5">
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="nombre_emp" name="nombre_emp" type="text" class="form-control form-control-sm" placeholder="Nombre Empleado" >
-                                                                    <label for="nombre_emp">Nombre Empleado</label>
+                                                                    <input id="nombre_user" name="nombre_user" type="text" class="form-control form-control-sm" placeholder="Nombre Cliente" >
+                                                                    <label for="nombre_user">Nombre Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="apellido_emp" name="apellido_emp" type="text" class="form-control form-control-sml"  placeholder="Apellido Empleado">
-                                                                    <label for="apellido_emp">Apellido Empleado</label>
+                                                                    <input id="apellido_user" name="apellido_user" type="text" class="form-control form-control-sml"  placeholder="Apellido Cliente">
+                                                                    <label for="apellido_user">Apellido Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="DNI_emp" name="DNI_emp" type="text" class="form-control" placeholder="DNI Empleado">
-                                                                    <label for="DNI_emp">DNI Empleado</label>
+                                                                    <input id="DNI_user" name="DNI_user" type="text" class="form-control" placeholder="DNI Cliente">
+                                                                    <label for="DNI_user">DNI Cliente</label>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="phone_emp" name="phone_emp" type="text" class="form-control" placeholder="Telefono Empleado">
-                                                                    <label for="phone_emp">Teléfono Empleado</label>
+                                                                    <input id="phone_user" name="phone_user" type="text" class="form-control" placeholder="Telefono Cliente">
+                                                                    <label for="phone_user">Teléfono Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="email_emp" name="email_emp" type="text" class="form-control" placeholder="Correo Electrónico Empleado">
-                                                                    <label for="email_emp">Correo Electrónico Empleado</label>
+                                                                    <input id="email_user" name="email_user" type="text" class="form-control" placeholder="Correo Electrónico Empleado">
+                                                                    <label for="email_user">Correo Electrónico Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="password_emp" name="password_emp" type="password" class="form-control" placeholder="Contraseña Empleado">
-                                                                    <label for="password_emp">Contraseña Empleado</label>
+                                                                    <input id="password_user" name="password_user" type="password" class="form-control" placeholder="Contraseña Cliente">
+                                                                    <label for="password_user">Contraseña Cliente</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -90,17 +90,17 @@
                                                     </div>                   
                                                 </div>
                                             </form>
-                                            <!-- //fin crear  -->
+                                            <!-- //fin crear cliente -->
                                         </div>                                                                                             
                                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                            <!-- /// eliminar empleado-->
+                                            <!-- /// eliminar cliente-->
                                             <form method="post" id="eliminar_form">
                                                 <div class="row vh-20 bg-secondary rounded align-items-center justify-content-center mx-0">
                                                     <div class="col-md-8 text-center">
-                                                    <h4 class="mb-3">ElIMINAR CUENTA DE UN EMPLEADO</h4>
+                                                    <h4 class="mb-3">ElIMINAR CUENTA DE UN CLIENTE</h4>
                                                     </div>
                                                 </div>
-                                                <label for="exampleInputEmail1" class="form-label">Ingrese el correo del empleado a eliminar</label>
+                                                <label for="exampleInputEmail1" class="form-label">Ingrese el correo del cliente a eliminar</label>
                                                 <div class="form-floating mb-3">
                                                     <input id="elim_correo" name="elim_correo" type="text" class="form-control" placeholder="Correo Electrónico">
                                                     <label for="elim_correo">Correo Electrónico</label>
@@ -110,21 +110,21 @@
                                                     <button id="btn_eliminar" name="action" value="add" class="btn btn-primary m-2">Eliminar Cuenta</button>
                                                 </div>
                                             </form>
-                                            <!-- //fin eliminar empleado-->
+                                            <!-- //fin eliminar cliente-->
                                         </div>
                                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                            <!-- /// editar empleado-->
+                                            <!-- /// editar cliente-->
                                             <form method="post" id="buscar_form">                                            
                                                 <div class="row vh-20 bg-secondary rounded align-items-center justify-content-center mx-0">
                                                         <div class="col-md-8 text-center">
-                                                        <h4 class="mb-3">EDITAR DATOS DE UN EMPLEADO</h4>
+                                                        <h4 class="mb-3">EDITAR DATOS DE UN CLIENTE</h4>
                                                         </div>
                                                 </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-8">                                                    
                                                         <div class="form-floating mb-3">                                                
-                                                            <input id="buscar_emp" name="buscar_emp" type="text" class="form-control form-control-sm" placeholder="Ingrese correo del empleado" >
-                                                            <label for="buscar_emp">Ingrese correo del empleado</label>                                                             
+                                                            <input id="buscar_user" name="buscar_user" type="text" class="form-control form-control-sm" placeholder="Ingrese correo del Cliente" >
+                                                            <label for="buscar_user">Ingrese correo del Cliente</label>                                                             
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
@@ -138,30 +138,30 @@
                                                         <div class="row">
                                                             <div class="col-md-5">
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="bNombre_emp" name="bNombre_emp" type="text" class="form-control form-control-sm" placeholder="Nombre Empleado" >
-                                                                    <label for="bNombre_emp">Nombre Empleado</label>
+                                                                    <input id="bNombre_user" name="bNombre_user" type="text" class="form-control form-control-sm" placeholder="Nombre Cliente" >
+                                                                    <label for="bNombre_user">Nombre Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="bApellido_emp" name="bApellido_emp" type="text" class="form-control form-control-sm" placeholder="Apellido Empleado" >
-                                                                    <label for="bApellido_emp">Apellido Empleado</label>
+                                                                    <input id="bApellido_user" name="bApellido_user" type="text" class="form-control form-control-sm" placeholder="Apellido Cliente" >
+                                                                    <label for="bApellido_user">Apellido Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="bDni_emp" name="bDni_emp" type="text" class="form-control form-control-sm" placeholder="DNI Empleado" >
-                                                                    <label for="bDni_emp">DNI Empleado</label>
+                                                                    <input id="bDni_user" name="bDni_user" type="text" class="form-control form-control-sm" placeholder="DNI Cliente" >
+                                                                    <label for="bDni_user">DNI Cliente</label>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="bPhone_emp" name="bPhone_emp" type="text" class="form-control form-control-sm" placeholder="Telefono Empleado" >
-                                                                    <label for="bPhone_emp">Telefono Empleado</label>
+                                                                    <input id="bPhone_user" name="bPhone_user" type="text" class="form-control form-control-sm" placeholder="Telefono Cliente" >
+                                                                    <label for="bPhone_user">Telefono Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="bEmail_emp" name="bEmail_emp" type="text" class="form-control form-control-sm" placeholder="Correo Electronico Empleado" >
-                                                                    <label for="bEmail_emp">Correo Electronico Empleado</label>
+                                                                    <input id="bEmail_user" name="bEmail_user" type="text" class="form-control form-control-sm" placeholder="Correo Electronico Cliente" >
+                                                                    <label for="bEmail_user">Correo Electronico Cliente</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input id="bPassword_emp" name="bPassword_emp" type="text" class="form-control form-control-sm" placeholder="Contrañea Empleado" >
-                                                                    <label for="bPassword_emp">Contraseña Empleado</label>
+                                                                    <input id="bPassword_user" name="bPassword_user" type="text" class="form-control form-control-sm" placeholder="Contrañea Cliente" >
+                                                                    <label for="bPassword_user">Contraseña Cliente</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -172,7 +172,7 @@
                                                     </div>        
                                                 </div>
                                             </form>
-                                            <!-- //fin editar empleado-->
+                                            <!-- //fin editar cliente-->
                                         </div>
                                     </div>
                                 </div>
@@ -208,9 +208,9 @@
 
     <!-- JavaScript Libraries -->
     <?php require_once '../MainJs/js.php'; ?>
-    <script type="text/JavaScript" src="nuevoEmpleado.js"></script>
-    <script type="text/JavaScript" src="eliminarEmpleado.js"></script>
-    <script type="text/JavaScript" src="buscarEmpleado.js"></script>
-    <script type="text/JavaScript" src="editarEmpleado.js"></script>
+    <script type="text/JavaScript" src="nuevoCliente.js"></script>
+    <script type="text/JavaScript" src="eliminarCliente.js"></script>
+    <script type="text/JavaScript" src="buscarCliente.js"></script>
+    <script type="text/JavaScript" src="editarCliente.js"></script>
 </body>
 </html>

@@ -149,5 +149,18 @@
             $sql->execute();
             return $resultado = $sql->fetchAll();
         }
+
+        /* public function verificarCorreoExistente($email) {
+            $conectar = parent::conexion();
+            parent::set_Names();    
+            // Consulta para verificar si el correo existe en la tabla de usuarios
+            $sql = "SELECT * FROM usuarios WHERE correo = ?";
+            $sql = $conectar->prepare($sql);
+            $sql->bindValue(1 , $email);
+            $sql->execute();
+            $resultado = $sql->fetch(PDO::FETCH_ASSOC);    
+            // Devolver true si el correo existe, false si no existe
+            return $resultado ? true : false;
+        } */
     }
 ?>

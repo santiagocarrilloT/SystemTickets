@@ -35,8 +35,14 @@ $user = $_SESSION['nombre_emp'];
                     <div class="navbar-nav w-100">
                         <a href="../Home/" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Inicio</a>
                         <a href="../NuevoTicket/" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Nuevo Ticket</a>
-                        <a href="../ConsultaTickets/" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Consultar Tickets</a>
-                        <a href="../ControlCuentas/controlCuentas.php" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Control Cuentas</a>
+                        <a href="../ConsultaTickets/" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Consultar Tickets</a>                        
+                        <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true"><i class="fa fa-user me-2"></i>Control Cuentas</a>
+                        <div class="dropdown-menu bg-transparent border-0 show" data-bs-popper="none">
+                            <a href="../ControlCuentas/controlCuentas.php" class="dropdown-item"><i class="dropdown-item"></i>Control Empleado</a>
+                            <a href="../ControlCuentas/controlCliente.php" class="dropdown-item"><i class="dropdown-item"></i>Control Cliente</a>
+                        </div>
+                    </div>
                     </div>
                 </nav>        
             </div>
