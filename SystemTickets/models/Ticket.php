@@ -127,12 +127,25 @@
             return $resultado = $sql->fetchAll();
         }
 
-        public function eliminarTicket($id_ticket){
+        public function estadisticaEstado($atributo){
             $conectar = parent::conexion();
             parent::set_Names();
-            $sql = "DELETE FROM tickets WHERE id_ticket = ?";
+            $sql = "SELECT COUNT(*) AS repeticiones 
+            FROM tickets WHERE estado_ticket = ? 
+            ORDER BY repeticiones DESC";
             $sql = $conectar->prepare($sql);
-            $sql-> bindValue(1, $id_ticket);
+            $sql-> bindValue(1, $atributo);
+            $sql->execute();
+            return $resultado = $sql->fetchAll();
+        }
+
+        public function estadisticaTitulo($atributo){
+            $conectar = parent::conexion();
+            parent::set_Names();
+            $sql = "SELECT COUNT(*) AS repeticiones 
+            FROM tickets WHERE titulo_ticket LIKE '%$atributo%'
+            ORDER BY repeticiones DESC;";
+            $sql = $conectar->prepare($sql);
             $sql->execute();
             return $resultado = $sql->fetchAll();
         }

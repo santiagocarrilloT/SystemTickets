@@ -33,9 +33,51 @@ $name_user = $_SESSION['nombre_user'];
 
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>Tablero de opciones</h3>
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 d-flex justify-content-center">Tickets en Revisión</p>
+                                <h6 class="mb-0 btn btn-outline-info m-2 d-flex justify-content-center" style="border-radius:12px; width: 190px;" id="revision_h">-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 d-flex justify-content-center">Tickets en Progreso</p>
+                                <h6 class="mb-0 btn btn-outline-info m-2 d-flex justify-content-center" style="border-radius:12px; width: 190px;" id="progreso_h">-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-area fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 d-flex justify-content-center">Tickets Terminados</p>
+                                <h6 class="mb-0 btn btn-outline-info m-2 d-flex justify-content-center" style="border-radius:12px; width: 190px;" id="terminado_h">-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 d-flex justify-content-center">Tickets para Software</p>
+                                <h6 class="mb-0 btn btn-outline-info m-2 d-flex justify-content-center" style="border-radius:12px; width: 190px;" id="software_h">-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-12 d-flex justify-content-center">
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-laptop fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2 d-flex justify-content-center">Tickets para Hardware</p>
+                                <h6 class="mb-0 btn btn-outline-info m-2 d-flex justify-content-center" style="border-radius:12px; width: 190px;" id="hardware_h">-</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +110,7 @@ $name_user = $_SESSION['nombre_user'];
 
     <!-- JavaScript Libraries -->
     <?php require_once '../MainJs/js.php'; ?>
-    <script type="text/JavaScript" src="Home.js"></script>
+    <script type="text/JavaScript" src="homeCliente.js"></script>
 </body>
 
 </html>
