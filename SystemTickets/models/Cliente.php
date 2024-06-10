@@ -114,7 +114,7 @@
             $sql->execute();
             return $resultado = $sql->fetchAll();
         }
-    }
+    
 
         //funcion para crear un nuevo cliente
         public function nuevoCliente($DNI_user, $nombre_user, $apellido_user, $phone_user, $email_user, $password_user){
