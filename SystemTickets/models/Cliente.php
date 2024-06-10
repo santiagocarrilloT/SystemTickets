@@ -90,6 +90,32 @@
             return $resultado = $sql->fetchAll();
         }
 
+
+        public function estadisticaEstadoCli($atributo){
+            $conectar = parent::conexion();
+            parent::set_Names();
+            $sql = "SELECT COUNT(*) AS repeticiones FROM tickets WHERE estado_ticket LIKE '%$atributo%'
+            AND correo_cliente in (SELECT email_user FROM usuarios WHERE email_user=? ) 
+            ORDER BY repeticiones DESC;";
+            $sql = $conectar->prepare($sql);
+            $sql-> bindValue(1, $_SESSION["email_user"]);
+            $sql->execute();
+            return $resultado = $sql->fetchAll();
+        }
+
+        public function estadisticaTituloCli($atributo){
+            $conectar = parent::conexion();
+            parent::set_Names();
+            $sql = "SELECT COUNT(*) AS repeticiones FROM tickets WHERE titulo_ticket LIKE '%$atributo%' 
+            AND correo_cliente in (SELECT email_user FROM usuarios WHERE email_user=? ) 
+            ORDER BY repeticiones DESC;";
+            $sql = $conectar->prepare($sql);
+            $sql-> bindValue(1, $_SESSION["email_user"]);
+            $sql->execute();
+            return $resultado = $sql->fetchAll();
+        }
+    }
+
         //funcion para crear un nuevo cliente
         public function nuevoCliente($DNI_user, $nombre_user, $apellido_user, $phone_user, $email_user, $password_user){
             $conectar = parent::conexion();
@@ -202,5 +228,6 @@
             }
         }        
 }
+
     
 ?>

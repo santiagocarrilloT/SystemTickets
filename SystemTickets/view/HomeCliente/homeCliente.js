@@ -1,20 +1,19 @@
-
 $(document ).ready(function() {
 
-    estadisticaEstado('Revision', '#revision_h');
-    estadisticaEstado('Progreso', '#progreso_h');
-    estadisticaEstado('Terminado', '#terminado_h');
+    estadisticaEstadoCli('Revision', '#revision_h');
+    estadisticaEstadoCli('Progreso', '#progreso_h');
+    estadisticaEstadoCli('Terminado', '#terminado_h');
 
-    estadisticaTitulo('hardware', '#hardware_h');
-    estadisticaTitulo('software', '#software_h');
+    estadisticaTituloCli('hardware', '#hardware_h');
+    estadisticaTituloCli('software', '#software_h');
 });
 
-function estadisticaEstado(estado, componente){
+function estadisticaEstadoCli(estado, componente){
     $.ajax({
-        url: "../../controller/ticket.php?op=estadistica",
+        url: "../../controller/cliente.php?op=estadistica_cli",
         type: "post",
         dataType: "text",
-        data: {estado: estado},
+        data: {estado_cli: estado},
         success: function(data){
             if(data.trim() == ''){
                 $(componente).text('0');
@@ -27,12 +26,12 @@ function estadisticaEstado(estado, componente){
         console.log(e.responseText);
     });
 }
-function estadisticaTitulo(titulo, componente){
+function estadisticaTituloCli(titulo, componente){
     $.ajax({
-        url: "../../controller/ticket.php?op=titulo_count",
+        url: "../../controller/cliente.php?op=titulo_count_cli",
         type: "post",
         dataType: "text",
-        data: {titulo: titulo},
+        data: {titulo_cli: titulo},
         success: function(data){
             if(data.trim() == ''){
                 $(componente).text('0');

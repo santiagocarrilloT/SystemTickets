@@ -26,29 +26,6 @@ $(document).ready(function(){
     });
 });
 
-function cargarSinFiltro(){
-    $.ajax({
-        url: "../../controller/ticket.php?op=listar_tickets",
-        type: "post",
-        dataType: "json",
-        success: function(data){
-            data.aaData.forEach(ticket => {
-                var row = '<tr>' +
-                            '<td>' + ticket.id_ticket + '</td>' +
-                            '<td>' + ticket.numserie_ticket + '</td>' +
-                            '<td>' + ticket.titulo_ticket + '</td>' +
-                            '<td>' + ticket.fecha_vencimiento + '</td>' +
-                            '<td>' + ticket.estado_ticket + '</td>' +
-                            '<td>' + ticket.correo_cliente + '</td>' +
-                            '<td class="text-center"><a href="editTicket.php?id=' + ticket.id_ticket + '" class="btn btn-warning m-1" id="'+ticket.id_ticket+'"><i class="fa fa-edit"></i></a></td>' +
-                            '<td class="text-center"><button type="submit" value="'+ticket.id_ticket+'" class="btn btn-info m-1 view-btn" id="'+ticket.id_ticket+'"><i class="fa fa-list"></i></button></td>' +
-                            '</tr>';
-                $('#ticket_data tbody').append(row);
-            });
-        }
-    });
-}
-
 //Función para mostrar el detalle del ticket
 function detallesTicket(id_ticket){
     console.log(id_ticket);

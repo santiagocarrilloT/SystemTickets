@@ -43,6 +43,7 @@
                 "aaData"=>$data);    
             echo json_encode($resultado);
             break;
+
         case "obtener_ticket":
             $datos = $ticket->obtenerTicket($_POST["ticket_id"]);
             foreach($datos as $row){
@@ -66,6 +67,24 @@
                 "aaData"=>$data);    
             echo json_encode($resultado);
             break; 
+        case "estadistica_cli":
+            $datos = $ticket->estadisticaEstadoCli($_POST["estado_cli"]);
+            $resultado = "";
+            foreach($datos as $row){
+                $resultado = $row["repeticiones"];
+            }
+            echo $resultado;
+            break;
+            
+        case "titulo_count_cli":
+            $datos = $ticket->estadisticaTituloCli($_POST["titulo_cli"]);
+            $resultado = "";
+            foreach($datos as $row){
+                $resultado = $row["repeticiones"];
+            }
+            echo $resultado;
+            break;
+        break;
         case "insert":
             $datos = $ticket->nuevoCliente(
                 $_POST["DNI_user"],
@@ -98,5 +117,3 @@
         break;
     }
 ?>
-
-

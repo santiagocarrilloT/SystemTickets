@@ -100,6 +100,22 @@
                 $_POST["edit_correo"]
             );
             break;
+        case "estadistica":
+            $datos = $ticket->estadisticaEstado($_POST["estado"]);
+            $resultado = "";
+            foreach($datos as $row){
+                $resultado = $row["repeticiones"];
+            }
+            echo $resultado;
+            break;
+        case "titulo_count":
+            $datos = $ticket->estadisticaTitulo($_POST["titulo"]);
+            $resultado = "";
+            foreach($datos as $row){
+                $resultado = $row["repeticiones"];
+            }
+            echo $resultado;
+            break;
         break;
         
     }
