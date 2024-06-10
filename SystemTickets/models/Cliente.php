@@ -33,6 +33,63 @@
                 }   
             }
         }
+
+        public function listarTicket(){          
+            $conectar = parent::conexion();
+            parent::set_Names();            
+            $sql = "SELECT * FROM tickets where correo_cliente in (SELECT email_user FROM usuarios WHERE correo_cliente= ?)";
+            $sql = $conectar->prepare($sql);
+            $sql-> bindValue(1, $_SESSION["email_user"]);
+            $sql->execute();
+            return $resultado = $sql->fetchAll();
+            if(is_array($resultado) and count($resultado)>0){
+                return $resultado;
+            }else{
+                echo "No hay tickets registrados";
+            } 
+        }
+
+        public function buscarTicket($atributo, $valor){
+            switch($atributo){
+                case '1':
+                    $atributo = "id_ticket";
+                    break;
+                case '2':
+                    $atributo = "numserie_ticket";
+                    break;
+                case '3':
+                    $atributo = "titulo_ticket";
+                    break;
+                case '4':
+                    $atributo = "fecha_vencimiento";
+                    break;
+                case '5':
+                    $atributo = "estado_ticket";
+                    break;
+                case '6':
+                    $atributo = "correo_cliente";
+                    break;
+            }
+            $conectar = parent::conexion();
+            parent::set_Names();
+            $sql = "SELECT * FROM tickets where correo_cliente in (SELECT email_user FROM usuarios WHERE correo_cliente=?) and $atributo like '%$valor%'";
+            $sql = $conectar->prepare($sql);
+            $sql-> bindValue(1, $_SESSION["email_user"]);
+            $sql->execute();
+            return $resultado = $sql->fetchAll();
+        }
+
+        public function obtenerTicket($id_ticket){
+            $conectar = parent::conexion();
+            parent::set_Names();
+            $sql = "SELECT * FROM tickets where correo_cliente in (SELECT email_user FROM usuarios WHERE correo_cliente=?) and id_ticket = ?";
+            $sql = $conectar->prepare($sql);
+            $sql-> bindValue(1, $_SESSION["email_user"]);
+            $sql-> bindValue(2, $id_ticket);
+            $sql->execute();
+            return $resultado = $sql->fetchAll();
+        }
+
         public function estadisticaEstadoCli($atributo){
             $conectar = parent::conexion();
             parent::set_Names();
@@ -56,7 +113,6 @@
             $sql->execute();
             return $resultado = $sql->fetchAll();
         }
-        
     }
     
 ?>
