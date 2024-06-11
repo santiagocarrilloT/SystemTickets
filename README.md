@@ -9,6 +9,8 @@
 - Maria Paula Lemus Agudelo
 - Daniela Orrego Alfonso
 ```
+### Documentacion completa proyecto final
+[Documentacion](SystemTickets/DOC/Sistemas de Gestión de Tickets.pdf)
 
 ## Definición del Problema
 
