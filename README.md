@@ -10,7 +10,7 @@
 - Daniela Orrego Alfonso
 ```
 ### Documentacion completa proyecto final: 
-Aqui esta el pdf de [Documentacion](SystemTickets/DOC/Sistemas de Gestión de Tickets.pdf)
+[Aquí está el PDF de la Documentación](SystemTickets/DOC/Sistemas%20de%20Gestión%20de%20Tickets.pdf)
 
 ## Definición del Problema
 
