@@ -1,13 +1,13 @@
 # Sistema de Gestión de Tickets
 ## Integrantes
 ```
-- Edwar Yamir Forero Blanco
-- Santiago Aníbal Carrillo Torres
-- Juan Eduardo Calderón Jaramillo
-- Jandi Yandubery Ramírez Mesa
-- Camilo Andrés Viedma Rueda
-- Maria Paula Lemus Agudelo
-- Daniela Orrego Alfonso
+- [Edwar Yamir Forero Blanco](https://github.com/Edwar-Forero)
+- [Santiago Aníbal Carrillo Torres](https://github.com/santiagocarrilloT)
+- [Juan Eduardo Calderón Jaramillo](https://github.com/J-E-Calderon)
+- [Jandi Yandubery Ramírez Mesa](https://github.com/JandiRamirez0814)
+- [Camilo Andrés Viedma Rueda](https://github.com/Zyke023)
+- [Maria Paula Lemus Agudelo](https://github.com/minizyke)
+- [Daniela Orrego Alfonso](https://github.com/danielaorrego3)
 ```
 ### Documentacion completa proyecto final: 
 [Aquí está el PDF de la Documentación](SystemTickets/DOC/Sistemas%20de%20Gestión%20de%20Tickets.pdf)
