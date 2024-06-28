@@ -5,9 +5,6 @@
 - [Santiago Aníbal Carrillo Torres](https://github.com/santiagocarrilloT)
 - [Jandi Yandubery Ramírez Mesa](https://github.com/JandiRamirez0814)
 
-### Documentacion completa proyecto final: 
-[Aquí está el PDF de la Documentación](SystemTickets/DOC/Sistemas%20de%20Gestión%20de%20Tickets.pdf)
-
 ## Definición del Problema
 
 El proyecto "Sistema de Gestión de Tickets" aborda la gestión eficiente y efectiva de dispositivos informáticos en una empresa dedicada a la venta y reparación de ordenadores. Este sistema se desarrolló para resolver la necesidad de controlar y registrar el historial de cada dispositivo, permitiendo que tanto trabajadores como clientes accedan a información relevante sobre el estado y el progreso del servicio.
